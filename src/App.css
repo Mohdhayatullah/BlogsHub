@@ -1,0 +1,48 @@
+/* src/App.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.not-found {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.not-found h1 {
+  font-size: 120px;
+  color: var(--primary-yellow);
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.not-found h2 {
+  font-size: 32px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.not-found p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .not-found h1 {
+    font-size: 80px;
+  }
+
+  .not-found h2 {
+    font-size: 24px;
+  }
+}

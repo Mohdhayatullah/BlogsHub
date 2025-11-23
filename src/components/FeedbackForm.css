@@ -1,0 +1,62 @@
+/* src/components/FeedbackForm.css */
+.feedback-form-container {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  border: 1px solid var(--border-color);
+}
+
+.feedback-form-container h3 {
+  font-size: 20px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rating-input {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rating-input label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stars {
+  display: flex;
+  gap: 8px;
+}
+
+.star-button {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--border-color);
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.star-button:hover,
+.star-button.active {
+  color: var(--primary-yellow);
+  transform: scale(1.1);
+}
+
+.feedback-form .btn {
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .feedback-form .btn {
+    width: 100%;
+  }
+}
