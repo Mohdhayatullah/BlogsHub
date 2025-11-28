@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { FaSun, FaMoon, FaBars, FaTimes, FaUser, FaBlog } from 'react-icons/fa';
@@ -44,9 +44,12 @@ const Navbar = () => {
             <Link to="/about" className="nav-link" onClick={closeMenu}>
               About <FcAbout />
             </Link>
-            <Link to="/contact" className="nav-link" onClick={closeMenu}>
+            {/* <Link to="/contact" className="nav-link" onClick={closeMenu}>
               Contact<Contact />
-            </Link>
+            </Link> */}
+            <NavLink to="/contact" className="nav-link" color='red' onClick={closeMenu}>
+              Contact<Contact />
+            </NavLink>
             
             {isAuthenticated ? (
               <>

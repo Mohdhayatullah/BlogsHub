@@ -1,8 +1,9 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:1000/blogs/v1.0';
-
+const API_BASE_URL = 'https://blogsbackend-3g0m.onrender.com/blogs/v1.0';
+// http://localhost:1000/blogs/v1.0
+// https://blogsbackend-3g0m.onrender.com
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
@@ -23,6 +24,7 @@ api.interceptors.request.use(
     return Promise.reject(error);
   }
 );
+
 
 // Response interceptor to handle errors
 api.interceptors.response.use(
